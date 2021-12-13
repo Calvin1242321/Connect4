@@ -146,11 +146,11 @@ void draw()
 	{
 		if (yelloSide)
 		{
-			cout << "黃色下棋\n";
+			cout << "Yellow's Turn\n";
 		}
 		else
 		{
-			cout << "紅色下棋\n";
+			cout << "Red's Turn\n";
 		}
 	}
 
@@ -170,13 +170,13 @@ bool gameContinue()
 		{
 			if (board[i][j] == 1 && board[i][j + 1] == 1 && board[i][j + 2] == 1 && board[i][j + 3] == 1)
 			{
-				cout << "黃色勝利\n";
+				cout << "Yellow won!\n";
 				//system("pause");
 				return false;
 			}
 			else if (board[i][j] == 2 && board[i][j + 1] == 2 && board[i][j + 2] == 2 && board[i][j + 3] == 2)
 			{
-				cout << "紅色勝利\n";
+				cout << "Red won!\n";
 				//system("pause");
 				return false;
 			}
@@ -190,13 +190,13 @@ bool gameContinue()
 		{
 			if (board[i][j] == 1 && board[i + 1][j] == 1 && board[i + 2][j] == 1 && board[i + 3][j] == 1)
 			{
-				cout << "黃色勝利\n";
+				cout << "Yellow won!\n";
 				//system("pause");
 				return false;
 			}
 			else if (board[i][j] == 2 && board[i + 1][j] == 2 && board[i + 2][j] == 2 && board[i + 3][j] == 2)
 			{
-				cout << "紅色勝利\n";
+				cout << "Red won!\n";
 				//system("pause");
 				return false;
 			}
@@ -210,13 +210,13 @@ bool gameContinue()
 		{
 			if (board[i][j] == 1 && board[i + 1][j + 1] == 1 && board[i + 2][j + 2] == 1 && board[i + 3][j + 3] == 1)
 			{
-				cout << "黃色勝利\n";
+				cout << "Yellow won!\n";
 				system("pause");
 				return false;
 			}
 			else if (board[i][j] == 2 && board[i + 1][j + 1] == 2 && board[i + 2][j + 2] == 2 && board[i + 3][j + 3] == 2)
 			{
-				cout << "紅色勝利\n";
+				cout << "Red won!\n";
 				system("pause");
 				return false;
 			}
@@ -229,13 +229,13 @@ bool gameContinue()
 		{
 			if (board[i][j] == 1 && board[i + 1][j - 1] == 1 && board[i + 2][j - 2] == 1 && board[i + 3][j - 3] == 1)
 			{
-				cout << "黃色勝利\n";
+				cout << "Yellow won!\n";
 				//system("pause");
 				return false;
 			}
 			else if (board[i][j] == 2 && board[i + 1][j - 1] == 2 && board[i + 2][j - 2] == 2 && board[i + 3][j - 3] == 2)
 			{
-				cout << "紅色勝利\n";
+				cout << "Red won!\n";
 				//system("pause");
 				return false;
 			}
@@ -245,7 +245,7 @@ bool gameContinue()
 	//	draw
 	if (counter == 42)
 	{
-		cout << "平手\n";
+		cout << "Draw\n";
 		system("pause");
 		return false;
 	}
@@ -262,8 +262,6 @@ void yelloPlay(Vector2i a)
 	if (columnMax[line - 1] > HEIGHT)
 	{
 		columnMax[line - 1]--;
-		cout << "這排滿了, 再輸入一次\n";
-
 	}
 
 	for (int i = WIDTH - 1;i >= 0;i--)
@@ -291,7 +289,6 @@ void redPlay(Vector2i a)
 	if (columnMax[line - 1] > HEIGHT)
 	{
 		columnMax[line - 1]--;
-		cout << "這排滿了, 再輸入一次\n";
 	}
 
 	for (int i = WIDTH - 1;i >= 0;i--)
